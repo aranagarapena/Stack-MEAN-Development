@@ -1,0 +1,60 @@
+
+# --------------- BACKEND --------------------
+
+## ----- INDICE
+## express - Framework del lado backend - podemos escuchar peticiones HTTP etc.
+## morgan - middleware para escuchar peticiones HTTP y mostrarlas por consola
+## nodemoon - modulo para reiniciar el servidor cada vez que cambiamos 
+
+## PARA ARRANCAR EL SERVIDOR HAY QUE EJECUTAR EL ARCIVO "index.js" 
+
+## creamos el servidor con express
+
+## "database.js" - archivo para conectarme a la BD
+## "app.js" - guardamos el codigo referente al servidor
+    - movemos el codigo referente a app desde el index a este fichero
+
+## En el directorio "Controllers" está la lógica de las funciones que se estan ejecutando
+## "routes" - carpeta que contiene las rutas del servidor
+## "models" - modelos de datos
+
+## instalamos nodemoon 
+## en el archivo package.json
+    - dependecies --> modulos que utilizamos cuando la app esta en producion
+    - devDependencies --> modulos que utilizamos cuando la app esta en desarrollo
+    - scripts
+        - me creo el script "dev": aqui queremos usar nodemoon
+        - para ejecutarlo "npm run dev"
+
+## configuramos el puerto de escucha del servidor en app (app.set()) y lo recogemos desde index (app.get())
+
+## hasta este momento hemos creado una app de servidor, pero ahora queremos escuchar peticiones en nuestro servidor que vengan desde un frontend. Para ello, tenemos que crear una API
+    - En "routes" creamos "employees.routes.js" - en este archivo lo que vamos a hacer es configurar las rutas de nuestra API
+
+## creamos  en "controllers" el archivo "employees.controllers.js" para crear la lógica, o las operaciones que queremos que haga nuestro back cuando llamamos a una ruta
+
+## flujo de trabajo hasta ahora 
+    - corremos el backend ejecutando el index.js
+        - este escucha en el puerto que tenga configurado el archivo app.js
+    - configuramos el fichero app.js con el metodo use() para que utilice  el router (employees.route.js) cuando reciba una consulta a una URL, en este caso al prefijo "/api/employees"
+    - en routes (employees.route.js), configuramos las diferentes rutas a las que se puede llamar en nuestra API, y estas llaman al controlador para ejecutar la tarea que se le está pidiendo
+    - en controllers, concretamente en el archivo emplyees.controller.js, programamos la lógica de la tarea que se le ha pedido a la API
+
+
+## Una vez creadas las rutas, con res.send() comprobamos que funciona usando postman, o la extencsio API REST de VSCode
+
+## Agregamos la BD
+    - comprobamos que mongodb está instalado
+    - arrancamos mongod
+
+## Mongoose
+    - para poder realizar operaciones con la BD de manera mas sencilla, importamos Mongoose
+    - Nos creamos un modelo de datos (Schema) de empleado para poder utilizarlo
+    - Desde las rutas, con el metodo Save de mongoose 
+
+    
+## ECHAR A ANDAR BACKEND
+    - Abrir terminal integrado en backend - mongod
+    - Abrir terminal integrado en backend - npm run dev
+
+    

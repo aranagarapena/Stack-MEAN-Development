@@ -1,0 +1,35 @@
+// archivo para probar las rutas de la API
+
+// ----------------------------- funciones para probar si funcionan las peticiones ------------------------
+
+
+### Obtener todos los empleados
+GET http://localhost:4000/api/employees
+
+### Obtener un empleado con un ID
+GET http://localhost:4000/api/employees/6270edd0c6390565ba933721
+
+### 
+POST http://localhost:4000/api/employees
+
+### Guardar un empleado con datos
+POST http://localhost:4000/api/employees
+Content-Type: application/json
+
+{
+    "name" : "Pruebaman Woman",
+    "position" : "Pruebawomanposition",
+    "office" : "Prueba woman office",
+    "salary" : "27000"
+}
+
+### Borrar un empleado
+DELETE http://localhost:4000/api/employees/6270fe570b8299bca5a19f9d
+
+### Editar un usuario
+PUT http://localhost:4000/api/employees/6270ff7b37b6b32fd1d47607 
+Content-Type: application/json
+
+{
+    "salary" : "36000"
+}

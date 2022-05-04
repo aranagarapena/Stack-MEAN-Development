@@ -65,3 +65,15 @@
  - Correr el ng serve -o
  - creamos un directorio de componentes con un componente llamado "employees"
  - Creamos el directorio "services"
+
+- Instalamos bootswatch para utilizar un tema de bootstrap
+- hay que requerir el framework en "angular.json". En nuestro caso el tema "materia", en la web de Bootswatch se peuden ver todos los que hay grauitos
+     "styles": [
+              "src/styles.css",
+              "bootswatch/dist/materia/bootstrap.min.css"
+- En la docu de bootstrap "https://getbootstrap.com/docs/5.1/components/navbar/" buscamos una barra de navegación
+- creamos ahora la interfaz como queramos. En este caso con una tabla y un formulario
+
+- Creamos el servicio en Angular para poder consumir del backend "ng c s services/employee"
+
+min 1:25:10

@@ -60,3 +60,8 @@
 ## FRONTED
 
  - Minuto 01:02:50 - https://www.youtube.com/watch?v=qf8-JzU-4IE&list=PLZOstcbQvZh8mSef5XpVOiUWZqnKIdthc&index=14&t=1s
+
+ - Creamos el proyecto angular "frontend"
+ - Correr el ng serve -o
+ - creamos un directorio de componentes con un componente llamado "employees"
+ - Creamos el directorio "services"

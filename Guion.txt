@@ -77,3 +77,4 @@
 - Creamos el servicio en Angular para poder consumir del backend "ng c s services/employee"
 
 min 1:25:10
+min 1:32:40

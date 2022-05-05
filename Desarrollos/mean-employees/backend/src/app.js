@@ -5,6 +5,7 @@
 // modulo para poder crear nuestro servidor
 const express = require('express')
 const morgan = require('morgan')
+const cors = require('cors')
 
 // ------------------------------------------ CODIGO ---------------------------------
 
@@ -17,6 +18,9 @@ const app = express()
         si no que coja el 4000
 */
 app.set('port', process.env.PORT || 4000)
+
+// para que nos permita aceptar peticiones de cualquier servidor
+app.use(cors())
 
 // escucha las peticiones que van llegando al servidor y las pinta por consola
 app.use(morgan('dev'))

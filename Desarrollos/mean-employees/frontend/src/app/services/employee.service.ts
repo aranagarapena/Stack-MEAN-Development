@@ -11,11 +11,13 @@ export class EmployeeService {
   URL_API : string = "http://localhost:4000/api/employees"
 
   // 
-  employees : Employee[];
+  employees : Array<Employee>;
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {
+    this.employees = new Array<Employee>();
+   }
 
   getEmployees() : Observable<any>{
-    return this.http.get(this.URL_API);
+    return this.http.get<Employee[]>(this.URL_API);
   }
 }

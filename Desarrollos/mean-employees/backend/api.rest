@@ -17,14 +17,14 @@ POST http://localhost:4000/api/employees
 Content-Type: application/json
 
 {
-    "name" : "Pruebaman Woman",
-    "position" : "Pruebawomanposition",
-    "office" : "Prueba woman office",
-    "salary" : "27000"
+    "name" : "Pautomal",
+    "position" : "Sientifica",
+    "office" : "Biocruces",
+    "salary" : "30000"
 }
 
 ### Borrar un empleado
-DELETE http://localhost:4000/api/employees/6270fe570b8299bca5a19f9d
+DELETE http://localhost:4000/api/employees/6270faeace6cd980e5d9a734
 
 ### Editar un usuario
 PUT http://localhost:4000/api/employees/6270ff7b37b6b32fd1d47607 

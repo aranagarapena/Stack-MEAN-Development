@@ -10,7 +10,7 @@ import { EmployeeService } from 'src/app/services/employee.service';
 export class EmployeeComponent implements OnInit {
 
 
-  constructor(private employeeService: EmployeeService) { }
+  constructor(public employeeService: EmployeeService) { }
 
   ngOnInit(): void {
     this.getEmployee();
@@ -20,6 +20,7 @@ export class EmployeeComponent implements OnInit {
 getEmployee() : void {
   this.employeeService.getEmployees().subscribe({
     next : data =>{
+      this.employeeService.employees = data;
       console.log("Empleado Obtenido", data);
     },
     error : error => {

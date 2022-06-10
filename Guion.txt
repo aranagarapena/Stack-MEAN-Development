@@ -6,7 +6,7 @@
 ## morgan - middleware para escuchar peticiones HTTP y mostrarlas por consola
 ## nodemoon - modulo para reiniciar el servidor cada vez que cambiamos 
 
-## PARA ARRANCAR EL SERVIDOR HAY QUE EJECUTAR EL ARCIVO "index.js" 
+## PARA ARRANCAR EL SERVIDOR HAY QUE EJECUTAR EL ARCIVO "index.js"  - "node index.js"
 
 ## creamos el servidor con express
 
